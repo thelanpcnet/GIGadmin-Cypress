@@ -1,4 +1,4 @@
-describe('GIGadmin', () => {
+describe('GIGadmin Login Logout', () => {
  
   it('login', () => {
 
