@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "cypress": "cypress open"
+    "cypress": "cypress open --config watchForFileChanges=false"
   },
   "devDependencies": {
-    "cypress": "^13.6.4"
+    "cypress": "^13.6.6",
+    "cypress-file-upload": "^5.0.8"
   },
   "dependencies": {
     "dotenv": "^16.4.5"

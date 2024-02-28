@@ -1,6 +1,6 @@
 describe('GIGadmin Login Logout', () => {
  
-  it('login', () => {
+  it('Login/Logout', () => {
 
     // Enter GIGadmin portal
     cy.viewport(1920,1080)

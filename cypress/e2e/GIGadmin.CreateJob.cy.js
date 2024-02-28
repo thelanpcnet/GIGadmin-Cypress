@@ -1,6 +1,6 @@
-describe('GIGadmin Login Logout', () => {
+describe('GIGadmin Create Job', () => {
  
-  it('login', () => {
+  it('Create Job', () => {
   
       // Enter GIGadmin portal
       cy.viewport(1920,1080)
@@ -36,7 +36,7 @@ describe('GIGadmin Login Logout', () => {
         .click()
         .wait(1000)
       cy.get('.ant-select-item-option-content')
-        .contains('Vaiya')
+        .contains('Senya')
         .click()
 
       // Select Location
@@ -82,7 +82,7 @@ describe('GIGadmin Login Logout', () => {
         .click()
         .wait(1000)
       cy.get('.ant-select-item-option-content')
-        .contains('Vaiya')
+        .contains('Senya')
         .click()
         .wait(1000)
       cy.get(':nth-child(1) > :nth-child(3) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
