@@ -25,3 +25,5 @@ After Cypress is opened, please follow these steps:
 https://www.loom.com/share/366e2422f7114b06b6c21fabbeabfa7a?sid=62426efd-07e5-4e8c-8ae8-9b41992a309c
 ### Create Job
 https://www.loom.com/share/da17af15df554e2c93cab157f93c8b27?sid=110d2546-b7e2-4929-8c6b-1d9380cccd58
+### Create Candidate
+https://www.loom.com/share/1690475175464e8b8d631237f71cfcbf?sid=e50a724a-15e3-424b-911c-16b0978a739a
