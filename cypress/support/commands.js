@@ -1,25 +1,19 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('login', () => {
+// Enter GIGadmin portal
+    cy.viewport(1920,1080) // Setting viewport size
+    cy.clearAllCookies() // Clear cookies to ensure clean login state
+    cy.visit(Cypress.env('URL')) // Visit the login page
+    cy.wait(1000) // Add a wait to ensure elements are loaded
+
+    // Start Login
+    cy.get('#login_email')
+      .click()
+      .type(Cypress.env('USERNAME'))
+      .wait(1000)
+    cy.get('#login_password')
+      .click()
+      .type(Cypress.env('PASSWORD'))
+      .wait(1000)
+    cy.get('.ant-btn')
+      .click()
+})

@@ -1,26 +1,12 @@
 describe('GIGadmin Create Job', () => {
- 
+
+  beforeEach(()=>{
+    cy.login() // Login function is defined in cypress/support/commands.js
+  })
+
   it('Create Job', () => {
   
-      // Enter GIGadmin portal
-      cy.viewport(1920,1080)
-      cy.clearAllCookies()
-      cy.visit(Cypress.env('URL'))
-      cy.wait(1000)
-      
-      // Start Login
-      cy.get('#login_email')
-        .click()
-        .type(Cypress.env('USERNAME'))
-      cy.wait(1000)
-      cy.get('#login_password')
-        .click()
-        .type(Cypress.env('PASSWORD'))
-      cy.wait(1000)
-      cy.get('.ant-btn')
-        .click()
-    
-      // Go to Jobs
+      // Go to Jobs page
       cy.wait(1000) 
       cy.get('[style="opacity: 1; order: 5;"] > .ant-menu-title-content > .menu-label')
         .click()

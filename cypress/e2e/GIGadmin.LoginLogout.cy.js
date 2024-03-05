@@ -1,25 +1,10 @@
 describe('GIGadmin Login Logout', () => {
  
-  it('Login/Logout', () => {
+  beforeEach(()=>{
+    cy.login() // Login function is defined in cypress/support/commands.js
+  })
 
-    // Enter GIGadmin portal
-    cy.viewport(1920,1080)
-    cy.clearAllCookies()
-    cy.visit(Cypress.env('URL'))
-    cy.wait(1000)
-    
-    // Start Login
-    cy.get('#login_email')
-      .click()
-      .type(Cypress.env('USERNAME'))
-    cy.wait(1000)
-    cy.get('#login_password')
-      .click()
-      .type(Cypress.env('PASSWORD'))
-    cy.wait(1000)
-    cy.get('.ant-btn')
-      .click()
-    
+  it('Logout', () => {
     // Start Logout
     cy.wait(2000)
     cy.get('.ant-image-img').click()
