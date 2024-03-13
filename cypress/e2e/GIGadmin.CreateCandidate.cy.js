@@ -8,30 +8,12 @@ describe('GIGadmin Create Candidate', () => {
     })
 
     it('Create Candidate', () => {
-
-      // Enter GIGadmin portal
-      cy.viewport(1920,1080)
-      cy.clearAllCookies()
-      cy.visit(Cypress.env('URL'))
-      cy.wait(1000)
-      
-      // Start Login
-      cy.get('#login_email')
-        .click()
-        .type(Cypress.env('USERNAME'))
-      cy.wait(1000)
-      cy.get('#login_password')
-        .click()
-        .type(Cypress.env('PASSWORD'))
-      cy.wait(1000)
-      cy.get('.ant-btn')
-        .click()
       
       // Enter Candidate page
       cy.get('[style="opacity: 1; order: 2;"] > .ant-menu-submenu-title')
         .click()
         .wait(1000)
-        cy.get('.ant-menu-title-content > .menu-sublabel')
+      cy.get('.ant-menu-title-content > .menu-sublabel')
         .contains('Candidate')
         .click()
 
