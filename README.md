@@ -2,9 +2,10 @@
 This document will help you to run GIGadmin Cypress scripts properly
 ## Requirements
 You have to install:
-- NodeJS
-- Yarn
-- Cypress
+- [NodeJS](https://nodejs.org/en/download/current)
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+- [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
+- [cypress-file-upload](https://www.npmjs.com/package/cypress-file-upload)
 
 You also need my env file to run these scripts
 ## Step by step guide

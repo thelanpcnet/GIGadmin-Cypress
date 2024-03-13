@@ -39,24 +39,18 @@ describe('GIGadmin Create Candidate', () => {
       cy.get('.create-button > .ant-btn')
         .click()
       
-      // Create some variables to generate the name/email randomly
-      const randomPrefix = Math.random().toString(36).substring(2,15) /* Generate a random prefix for name and Email */
-      const randomEmail = randomPrefix + "@mailinator.com"
-      const randomFirstName =  randomPrefix + " Cypress"
-
-      // Enter First Name
-      cy.get('#firstname')
-        .type(randomFirstName)
-        .wait(500)
+      // Use random function which defined in commands.js to fill in the FirstName and Email fields
+      cy.random().then(({randomName, randomEmail}) => {
+        cy.get('#firstname')
+          .type(randomName)
+          .wait(500)
+        cy.get('#email')
+          .type(randomEmail)
+      })
 
       // Enter Last Name
       cy.get('#lastname')
         .type('User')
-        .wait(500)
-
-      // Enter Email
-      cy.get('#email')
-        .type(randomEmail)
         .wait(500)
 
       // Enter Phone Number

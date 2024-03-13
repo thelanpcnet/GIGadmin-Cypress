@@ -17,3 +17,11 @@ Cypress.Commands.add('login', () => {
     cy.get('.ant-btn')
       .click()
 })
+
+// Define the generate credentials randomly function
+Cypress.Commands.add('random', () => {
+  const randomPrefix = Math.random().toString(36).substring(2,15) /* Generate a random prefix for name and Email */
+  const randomEmail = randomPrefix + "@mailinator.com"
+  const randomName =  randomPrefix + " Cypress"
+  return {randomName: randomName, randomEmail: randomEmail}
+})
