@@ -1,13 +1,13 @@
 import 'cypress-file-upload'
 
-describe('GIGadmin Create Candidate', () => {
+describe('GIGadmin Create Candidate/Seeker', () => {
 
     //Call the login function
     beforeEach(()=>{
       cy.login() // Login function is defined in cypress/support/commands.js
     })
 
-    it('Create Candidate', () => {
+    it('Create Candidate/Seeker', () => {
       
       // Enter Candidate page
       cy.get('[style="opacity: 1; order: 2;"] > .ant-menu-submenu-title')
@@ -305,7 +305,7 @@ describe('GIGadmin Create Candidate', () => {
       cy.get('.wrap-btn > .ant-btn')
         .click()
 
-      // Set status to Approved
+      // Set status to Approved - Change Candidate to Seeker
       cy.get('.status-fields > .ant-row > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
         .click()
         .wait(500)
