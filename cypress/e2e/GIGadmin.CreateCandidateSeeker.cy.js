@@ -36,9 +36,11 @@ describe('GIGadmin Create Candidate/Seeker', () => {
         .wait(500)
 
       // Enter Phone Number
-      cy.get('#phone')
-        .type('09878987553')
+      cy.randomPhoneNumber().then(phoneNumber => {
+        cy.get('#phone')
+        .type(phoneNumber)
         .wait(500)
+      })
 
       // Enter Title
       cy.get(':nth-child(7) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')

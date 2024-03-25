@@ -25,3 +25,10 @@ Cypress.Commands.add('random', () => {
   const randomName =  randomPrefix + " Cypress"
   return {randomName: randomName, randomEmail: randomEmail}
 })
+
+// Define the generate random phone number function
+Cypress.Commands.add('randomPhoneNumber', () => {
+  const randomNumber = Math.floor(Math.random() * 90000000000) + 10000000000 // Generates a 11-digit random number
+  const phoneNumber = '0' + randomNumber.toString().substring(1) // Ensures the number starts with '0'
+  return phoneNumber
+})
