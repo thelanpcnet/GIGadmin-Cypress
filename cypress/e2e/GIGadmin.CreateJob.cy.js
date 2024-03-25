@@ -18,8 +18,7 @@ describe('GIGadmin Create Job', () => {
         .wait(1000)
 
       // Select Provider
-      cy.get('.provider-location-container > :nth-child(1) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
-        .click()
+      cy.get('.provider-location-container > :nth-child(2) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')        .click()
         .wait(500)
       cy.get('.ant-select-item-option-content')
         .contains('Vaiya')
@@ -27,7 +26,7 @@ describe('GIGadmin Create Job', () => {
         .click()
 
       // Select Location
-      cy.get('.provider-location-container > :nth-child(2) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
+      cy.get('.provider-location-container > :nth-child(3) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
         .click()
         .wait(500)     
       cy.get('.ant-select-item-option-content')
@@ -36,7 +35,7 @@ describe('GIGadmin Create Job', () => {
         .click()
 
       // Select Position
-      cy.get(':nth-child(3) > .lg-form-item > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
+      cy.get(':nth-child(4) > .lg-form-item > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
         .click()
         .wait(1000)
       cy.get('.ant-select-item-option-content')
